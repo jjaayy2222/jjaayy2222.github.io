@@ -1,0 +1,35 @@
+# Jekyll 빌드 결과물
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# 개발 중 임시 파일들
+temp/
+*.tmp
+*.bak
+/_posts/2025-08-10-welcome-to-jekyll.markdown
+
+# 기본 포스팅 파일 (선택적)
+_posts/welcome.md
+_posts/*-welcome-*
+
+# macOS 파일들
+.DS_Store
+.DS_Store?
+._*
+
+# 에디터 임시 파일들
+*.swp
+*.swo
+*~
+
+# 로그 파일들
+*.log
+
+# 번들러 관련
+vendor/
+.bundle/
+temp/
+*.tmp
+drafts/
