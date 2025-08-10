@@ -1,0 +1,110 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+#title: Your awesome title
+title: Jay's AI Research Journey
+
+email: qkfkadmlEkf@gmail.com
+# description: >- # this means to ignore newlines until "baseurl:"
+#  Write an awesome description for your new site here. You can edit this
+#  line in _config.yml. It will appear in your document head meta (for
+#  Google search results) and in your feed.xml site description.
+
+description: >-
+  인생은 전체는 되는 대로, 하루하루는 성실하게
+  하이브리드 프롬프트 전략과 AI 도구 분석 연구 여정
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jjaayy2222.github.io"
+#twitter_username: jekyllrb
+github_username:  jjaayy2222
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# 커스텀 CSS 경로 지정
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# 에러 무시하고 custom.css 사용
+
+
+# _config.yml에 카테고리 정의
+categories:
+  research:
+    title: "AI 도구 분석"
+    description: |
+      하이브리드 프롬프트 전략과  
+      AI 활용에 대한 심층 분석
+
+  career-journey:
+    title: "전환자 여정" 
+    description: |
+      뒤늦게 시작한 개발자의 길  
+      전환 과정에서 마주한 성장 이야기
+
+  philosophy:
+    title: "딴 짓 철학"
+    description: |
+      딴 짓에서 발견한 사소한 기쁨과  
+      재미있음의 가치
+
+  learning:
+    title: "학습 일기"
+    description: |
+        익숙한 길을 벗어나 프롬프트 한 줄에서 배우기
+        AI를 새롭게 보며 또 다른 배움 찾기
+
+# _config.yml에 추가
+exclude:
+  - temp/
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+# sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

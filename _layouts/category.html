@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="category-page">
+  <header class="category-header">
+    {% if page.category == 'research' %}
+      <h1>🔬 AI 도구 분석</h1>
+      <p class="category-description">하이브리드 프롬프트 전략과 AI 활용에 대한 심층 분석</p>
+    {% elsif page.category == 'career-journey' %}
+      <h1>🚀 전환자 여정</h1>
+      <p class="category-description">뒤늦게 시작한 개발자의 길, 전환 과정에서 마주한 성장 이야기</p>
+    {% elsif page.category == 'philosophy' %}
+      <h1>💭 딴 짓 철학</h1>
+      <p class="category-description">딴 짓에서 발견한 사소한 기쁨과 재미있음의 가치</p>
+    {% elsif page.category == 'learning' %}
+      <h1>📚 학습 일기</h1>
+      <p class="category-description">익숙한 길을 벗어나 프롬프트 한 줄에서 배우며, AI를 새롭게 보는 시각</p>
+    {% else %}
+      <h1>{{ page.category | capitalize }}</h1>
+    {% endif %}
+  </header>
+
+  <!-- 카테고리 네비게이션 포함 -->
+  {% include category-nav.html %}
+
+  <div class="posts-list">
+    {% assign category_posts = site.categories[page.category] %}
+    {% for post in category_posts %}
+      <article class="post-preview">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <time class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</time>
+        {% if post.tags %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if post.description %}
+          <p class="post-description">{{ post.description }}</p>
+        {% else %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        <a href="{{ post.url }}" class="read-more">자세히 읽기 →</a>
+      </article>
+    {% endfor %}
+  </div>
+</div>
