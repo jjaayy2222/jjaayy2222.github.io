@@ -21,4 +21,4 @@ tags: [copilot, chatgpt, gemini, claude, teaching]
 - Chat-GPT, Gemini, Claude, Perplexity 프롬프트 테스트 ✅
 
 
-#GreenGrassGrowing  #완벽준비완료   #🤞🏻🤞🏻🤞🏻 #fingers_croessed
+#GreenGrassGrowing  #완벽준비완료   #🤞🏻🤞🏻🤞🏻 #fingers_crossed
