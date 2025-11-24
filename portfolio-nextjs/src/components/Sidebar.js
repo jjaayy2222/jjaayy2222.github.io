@@ -67,7 +67,7 @@ export default function Sidebar() {
              {/* Placeholder for Profile Image */}
              <div className="w-full h-full bg-gray-300 dark:bg-gray-700" />
           </div>
-          <span className="font-bold text-sm text-gray-900 dark:text-white">Javier Martinez</span>
+          <span className="font-bold text-sm text-gray-900 dark:text-white">Jay</span>
         </div>
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -106,7 +106,7 @@ export default function Sidebar() {
              {/* Replace with actual image */}
              <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700" /> 
           </div>
-          <h2 className="font-bold text-gray-900 dark:text-white">Javier Martinez</h2>
+          <h2 className="font-bold text-gray-900 dark:text-white">Jay</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">Product Designer</p>
         </div>
 

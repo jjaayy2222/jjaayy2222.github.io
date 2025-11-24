@@ -17,7 +17,7 @@ export default function Home() {
             {/* Profile Image Placeholder */}
             <div className="absolute inset-0 bg-gray-300" />
           </div>
-          <h2 className="text-xl font-medium text-gray-900">Javier Martinez</h2>
+          <h2 className="text-xl font-medium text-gray-900">Jay</h2>
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-8 leading-[1.1]">
@@ -26,7 +26,7 @@ export default function Home() {
         </h1>
         
         <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-10">
-          Welcome to my portfolio! I am Javier Martinez, a passionate Product Designer, Web Designer, and Solopreneur with a keen eye for detail and a commitment to creating exceptional user experiences. Dive in to explore my work and discover how I can help bring your vision to life.
+          Welcome to my portfolio! I am Jay, a passionate Product Designer, Web Designer, and Solopreneur with a keen eye for detail and a commitment to creating exceptional user experiences. Dive in to explore my work and discover how I can help bring your vision to life.
         </p>
 
         <div className="flex gap-4">
