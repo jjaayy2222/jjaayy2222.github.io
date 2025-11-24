@@ -5,24 +5,24 @@ _site/
 .jekyll-metadata
 
 # Next.js 빌드 결과물
-portfolio-nextjs/.next/
-portfolio-nextjs/out/
-portfolio-nextjs/build/
-portfolio-nextjs/dist/
+.next/
+out/
+build/
+dist/
 
 # Next.js 의존성
-portfolio-nextjs/node_modules/
 node_modules/
 
 # Next.js 환경 변수
-portfolio-nextjs/.env*.local
-portfolio-nextjs/.env.local
-portfolio-nextjs/.env.development.local
-portfolio-nextjs/.env.test.local
-portfolio-nextjs/.env.production.local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
 # Next.js 캐시
-portfolio-nextjs/.turbo/
+.turbo/
 
 # 개발 중 임시 파일들
 temp/
