@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 포트폴리오 Next.js 프로젝트
 
-## Getting Started
+이 프로젝트는 [Next.js](https://nextjs.org)를 기반으로 만들어진 개인 포트폴리오 웹사이트입니다.
 
-First, run the development server:
+## 시작하기 (Getting Started)
+
+로컬 개발 환경에서 서버를 실행하려면 다음 명령어를 입력하세요:
 
 ```bash
 npm run dev
-# or
+# 또는
 yarn dev
-# or
+# 또는
 pnpm dev
-# or
+# 또는
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+명령어를 실행한 후 브라우저에서 [http://localhost:3000](http://localhost:3000)으로 접속하면 결과물을 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+`app/page.js` 파일을 수정하여 페이지를 편집할 수 있습니다. 파일을 저장하면 브라우저에 즉시 반영됩니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 더 알아보기
 
-## Learn More
+Next.js에 대해 더 알고 싶다면 다음 리소스를 참고하세요:
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 공식 문서](https://nextjs.org/docs) - Next.js의 기능과 API 상세 설명
+- [Next.js 튜토리얼](https://nextjs.org/learn) - 인터랙티브한 Next.js 학습 가이드
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 배포 (Deployment)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+이 프로젝트는 **GitHub Pages**를 통해 배포하여 운영합니다. (Vercel Platform은 사용하지 않습니다.)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub Pages 호스팅을 위해 정적 파일로 빌드되거나 GitHub Actions 워크플로우를 통해 배포됩니다.

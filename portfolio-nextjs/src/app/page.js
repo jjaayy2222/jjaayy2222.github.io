@@ -4,6 +4,7 @@ import ProjectCard from '@/components/ProjectCard'
 import InsightCard from '@/components/InsightCard'
 import { projects } from '@/data/projects'
 import { insights } from '@/data/insights'
+import { profileConfig } from '@/data/profile'
 
 export default function Home() {
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
@@ -14,8 +15,13 @@ export default function Home() {
       <section className="mb-32">
         <div className="flex items-center gap-4 mb-8">
           <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden relative">
-            {/* Profile Image Placeholder */}
-            <div className="absolute inset-0 bg-gray-300" />
+            <Image 
+              src={profileConfig.profileImage}
+              alt="Jay's profile"
+              width={64}
+              height={64}
+              className="object-cover"
+            />
           </div>
           <h2 className="text-xl font-medium text-gray-900">Jay</h2>
         </div>

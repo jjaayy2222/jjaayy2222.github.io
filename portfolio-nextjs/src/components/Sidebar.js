@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { profileConfig } from '@/data/profile';
 
 function TimeDisplay() {
   const [time, setTime] = useState('--:--')
@@ -39,7 +40,7 @@ const navItems = [
   { name: 'Products', path: '/products', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
   )},
-  { name: 'Writing', path: '/insights', icon: (
+  { name: 'Insights', path: '/insights', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
   )},
   { name: 'Stacks', path: '/stacks', icon: (
@@ -63,9 +64,14 @@ export default function Sidebar() {
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0a0a0a] sticky top-0 z-50 transition-colors">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
-             {/* Placeholder for Profile Image */}
-             <div className="w-full h-full bg-gray-300 dark:bg-gray-700" />
+          <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden relative">
+             <Image 
+               src={profileConfig.profileImage}
+               alt="Jay's profile"
+               width={32}
+               height={32}
+               className="object-cover"
+             />
           </div>
           <span className="font-bold text-sm text-gray-900 dark:text-white">Jay</span>
         </div>
@@ -103,8 +109,13 @@ export default function Sidebar() {
         {/* Profile Section */}
         <div className="mb-10">
           <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden relative">
-             {/* Replace with actual image */}
-             <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700" /> 
+             <Image 
+               src={profileConfig.profileImage}
+               alt="Jay's profile"
+               width={48}
+               height={48}
+               className="object-cover"
+             />
           </div>
           <h2 className="font-bold text-gray-900 dark:text-white">Jay</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">Product Designer</p>
