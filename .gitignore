@@ -63,7 +63,6 @@ temp/2025-11/11_24/
 temp/2025-11/11_24/files/
 temp/2025-11/11_24/files/Biobricks - Personal Portfolio Website.html
 
-# Vercel 배포
-.vercel
-
+# .vscode 관련
+.vscode/
 
