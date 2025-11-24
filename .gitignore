@@ -1,8 +1,28 @@
-# Jekyll 빌드 결과물
+# Jekyll 빌드 결과물 (레거시)
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Next.js 빌드 결과물
+portfolio-nextjs/.next/
+portfolio-nextjs/out/
+portfolio-nextjs/build/
+portfolio-nextjs/dist/
+
+# Next.js 의존성
+portfolio-nextjs/node_modules/
+node_modules/
+
+# Next.js 환경 변수
+portfolio-nextjs/.env*.local
+portfolio-nextjs/.env.local
+portfolio-nextjs/.env.development.local
+portfolio-nextjs/.env.test.local
+portfolio-nextjs/.env.production.local
+
+# Next.js 캐시
+portfolio-nextjs/.turbo/
 
 # 개발 중 임시 파일들
 temp/
@@ -26,10 +46,24 @@ _posts/*-welcome-*
 
 # 로그 파일들
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # 번들러 관련
 vendor/
 .bundle/
-temp/
-*.tmp
 drafts/
+
+# 임시 파일 (Framer 분석용)
+temp/
+temp/2025-08/
+temp/2025-11/
+temp/2025-11/11_24/
+temp/2025-11/11_24/files/
+temp/2025-11/11_24/files/Biobricks - Personal Portfolio Website.html
+
+# Vercel 배포
+.vercel
+
+
