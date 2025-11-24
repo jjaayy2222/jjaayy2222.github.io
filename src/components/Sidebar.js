@@ -3,29 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { profileConfig } from '@/data/profile';
-
-function TimeDisplay() {
-  const [time, setTime] = useState('--:--')
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date()
-      setTime(now.toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-      }))
-    }
-
-    updateTime()
-    const interval = setInterval(updateTime, 1000)
-    return () => clearInterval(interval)
-  }, [])
-
-  return <div className="text-sm font-mono text-gray-500">{time}</div>
-}
 
 const navItems = [
   { name: 'Home', path: '/', icon: (
@@ -43,7 +22,7 @@ const navItems = [
   { name: 'Insights', path: '/insights', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
   )},
-  { name: 'Stacks', path: '/stacks', icon: (
+  { name: 'Stacks', path: '/stack', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
   )},
 ];
@@ -58,6 +37,7 @@ const socialLinks = [
 export default function Sidebar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <>
@@ -68,8 +48,7 @@ export default function Sidebar() {
              <Image 
                src={profileConfig.profileImage}
                alt="Jay's profile"
-               width={32}
-               height={32}
+               fill
                className="object-cover"
              />
           </div>
@@ -105,20 +84,33 @@ export default function Sidebar() {
       )}
 
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex flex-col w-[280px] h-screen sticky top-0 p-8 border-r border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0a0a0a] overflow-y-auto transition-colors">
+      <aside 
+        className={`hidden md:flex flex-col h-screen sticky top-0 border-r border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0a0a0a] overflow-y-auto transition-all duration-300 relative ${
+          isCollapsed ? 'w-[80px] p-4' : 'w-[280px] p-8'
+        }`}
+      >
+        {/* Toggle Button */}
+        <button 
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="absolute top-8 -right-3 w-6 h-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 dark:hover:text-white z-10 shadow-sm"
+        >
+           <svg className={`w-3 h-3 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+        </button>
+
         {/* Profile Section */}
-        <div className="mb-10">
-          <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden relative">
+        <div className={`mb-10 transition-all duration-300 ${isCollapsed ? 'flex flex-col items-center' : ''}`}>
+          <div className={`${isCollapsed ? 'w-10 h-10' : 'w-12 h-12'} rounded-full bg-gray-200 dark:bg-gray-800 mb-4 overflow-hidden relative transition-all duration-300`}>
              <Image 
                src={profileConfig.profileImage}
                alt="Jay's profile"
-               width={48}
-               height={48}
+               fill
                className="object-cover"
              />
           </div>
-          <h2 className="font-bold text-gray-900 dark:text-white">Jay</h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Product Designer</p>
+          <div className={`transition-opacity duration-300 ${isCollapsed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
+            <h2 className="font-bold text-gray-900 dark:text-white whitespace-nowrap">Jay</h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Product Designer</p>
+          </div>
         </div>
 
         {/* Navigation */}
@@ -133,11 +125,14 @@ export default function Sidebar() {
                   isActive 
                     ? 'bg-black dark:bg-white text-white dark:text-black' 
                     : 'text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-900 dark:hover:text-white'
-                }`}
+                } ${isCollapsed ? 'justify-center' : ''}`}
+                title={isCollapsed ? item.name : ''}
               >
                 {item.icon}
-                {item.name}
-                {isActive && (
+                <span className={`transition-opacity duration-300 ${isCollapsed ? 'hidden' : 'block'}`}>
+                  {item.name}
+                </span>
+                {!isCollapsed && isActive && (
                   <svg className="w-3 h-3 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -149,13 +144,13 @@ export default function Sidebar() {
 
         {/* Online Status / Socials */}
         <div className="mb-auto">
-          <h3 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 px-3">
+          <h3 className={`text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 px-3 transition-opacity duration-300 ${isCollapsed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
             Online
           </h3>
-          <div className="px-3 mb-6">
+          <div className={`px-3 mb-6 ${isCollapsed ? 'flex justify-center' : ''}`}>
             <div className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <TimeDisplay />
+              {/* Time display removed */}
             </div>
           </div>
           <div className="space-y-1">
@@ -163,22 +158,27 @@ export default function Sidebar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-900 dark:hover:text-white transition-colors ${isCollapsed ? 'justify-center' : ''}`}
+                title={isCollapsed ? link.name : ''}
               >
-                <span className="flex items-center justify-center w-6 h-6 rounded bg-gray-100 dark:bg-gray-800 text-[10px] font-bold text-gray-600 dark:text-gray-300">
+                <span className="flex items-center justify-center w-6 h-6 rounded bg-gray-100 dark:bg-gray-800 text-[10px] font-bold text-gray-600 dark:text-gray-300 flex-shrink-0">
                   {link.icon}
                 </span>
-                {link.name}
-                <svg className="w-3 h-3 ml-auto text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
+                <span className={`transition-opacity duration-300 ${isCollapsed ? 'hidden' : 'block'}`}>
+                  {link.name}
+                </span>
+                {!isCollapsed && (
+                  <svg className="w-3 h-3 ml-auto text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                )}
               </a>
             ))}
           </div>
         </div>
 
         {/* Search */}
-        <div className="mt-8">
+        <div className={`mt-8 transition-opacity duration-300 ${isCollapsed ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
           <div className="relative">
             <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />

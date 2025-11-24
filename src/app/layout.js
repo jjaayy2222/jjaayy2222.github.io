@@ -19,7 +19,7 @@ import Footer from '@/components/Footer'
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fragmentMono.variable} font-sans bg-white text-gray-900 antialiased`}>
+      <body className={`${inter.variable} ${fragmentMono.variable} font-sans bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white antialiased transition-colors`}>
         <div className="flex min-h-screen flex-col md:flex-row">
           <Sidebar />
           <main className="flex-1 w-full max-w-5xl mx-auto p-6 md:p-12 lg:p-16">
