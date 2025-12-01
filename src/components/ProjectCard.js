@@ -10,16 +10,16 @@ export default function ProjectCard({ project }) {
         <div className="absolute inset-0 bg-gray-200 group-hover:scale-105 transition-transform duration-500" />
         
         {/* Actual Image (Uncomment when images are available) */}
-        {/* <Image
+        <Image
           src={project.image}
           alt={project.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
-        /> */}
+        />
       </div>
 
       <div>
-        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
           {project.title}
         </h3>
         <p className="text-sm text-gray-500 line-clamp-2 mb-2">

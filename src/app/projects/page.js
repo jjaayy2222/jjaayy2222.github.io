@@ -3,7 +3,7 @@ import ProjectCard from '@/components/ProjectCard'
 import { projects } from '@/data/projects'
 
 export const metadata = {
-  title: 'Projects - Biobricks',
+  title: 'Projects - Jay',
   description: 'A collection of projects I&apos;ve worked on.',
 }
 
@@ -25,7 +25,8 @@ export default function Projects() {
           Projects
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
-          A collection of projects I&apos;ve worked on, ranging from web applications to design systems. Each project represents a unique challenge and solution.
+          AI 기술로 사용자의 실제 문제를 해결한 결과물입니다.<br className="hidden md:block" />
+          기술적 구현을 넘어, 사용자의 숨겨진 니즈를 찾아내고 실질적인 가치를 전달하는 데 집중합니다.
         </p>
       </div>
 
