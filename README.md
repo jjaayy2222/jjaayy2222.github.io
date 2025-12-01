@@ -97,11 +97,11 @@ Azure 머신러닝 기반 개인화 식단 추천 알고리즘
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=jjaayy2222&show_icons=true&theme=tokyonight&hide_border=true)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=jjaayy2222&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jjaayy2222&layout=compact&theme=tokyonight&hide_border=true)
+[![trophy](https://github-profile-trophy.vercel.app/?username=jjaayy2222&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=jjaayy2222&theme=tokyonight&hide_border=true)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jjaayy2222&theme=tokyonight)
 
 </div>
 
