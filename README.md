@@ -160,6 +160,6 @@ Google Cloud AI/ML 자기주도 학습
 
 _사용자의 숨겨진 니즈를 찾아내고 실질적인 문제를 해결하는 AI Developer입니다._
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjjaayy2222&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Profile+Views&edge_flat=false)](https://hits.seeyoufarm.com)
+![Profile Views](https://komarev.com/ghpvc/?username=jjaayy2222&color=brightgreen&style=flat-square&label=Profile+Views)
 
 </div>
