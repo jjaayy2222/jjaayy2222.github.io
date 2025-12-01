@@ -1,108 +1,132 @@
 export const insights = [
   {
-    id: '1',
-    title: 'Next.js로 포트폴리오 사이트 만들기',
-    excerpt: 'Jekyll에서 Next.js로 마이그레이션하면서 배운 점들을 정리했습니다. React 기반의 현대적인 프레임워크로 전환하면서...',
-    content: `
-## 시작하며
-
-Jekyll에서 Next.js로 마이그레이션하면서 배운 점들을 정리했습니다.
-
-### 왜 Next.js인가?
-
-1. **React 기반**: 컴포넌트 재사용이 쉽습니다
-2. **빠른 성능**: 자동 최적화가 훌륭합니다
-3. **개발자 경험**: 개발 과정이 즐겁습니다
-
-### 주요 특징
-
-- 파일 기반 라우팅
-- 서버 사이드 렌더링
-- 이미지 최적화
-
-## 마치며
-
-Next.js는 정말 강력한 프레임워크입니다!
-    `,
-    author: 'Your Name',
-    date: '2025-01-15',
+    id: 'gpt-hybrid-strategy-discovery',
+    title: '하이브리드 프롬프트 전략 발견기',
+    excerpt: '일요일 오후, 수업 준비를 미루고 시작한 GPT-4.1 vs GPT-5 분석이 어떻게 논문급 연구로 이어졌는가...',
+    markdownFile: '2025-08-10-gpt-hybrid-strategy-discovery.md',
+    author: 'Jay',
+    date: '2025-08-10',
+    readTime: '3분',
+    category: 'Research',
+    tags: ['GPT분석', '하이브리드전략', '딴짓의가치'],
+    series: 'AI 도구 분석',
+  },
+  {
+    id: 'gpt5-methodology',
+    title: 'GPT-5 Methodology & Initial Findings',
+    excerpt: 'GPT-5 시스템 비교연구 첫 번째: 방법론과 초기 분석 결과. 일요일 오후, 수업 준비를 미루고 시작한 "딴 짓"이 어떻게 체계적인 AI 연구로 발전했는지 기록합니다.',
+    markdownFile: '2025-08-10-gpt5-methodology.md',
+    author: 'Jay',
+    date: '2025-08-10',
+    readTime: '15분',
+    category: 'Research',
+    tags: ['GPT-5', 'methodology', 'initial-findings', 'AI-analysis'],
+    series: 'GPT-5 비교 연구',
+  },
+  {
+    id: 'gpt5-comprehensive-analysis',
+    title: 'GPT-5 Comprehensive Analysis Report',
+    excerpt: 'GPT-5 시스템 종합 분석 보고서: 상세한 성능 평가와 비교 결과. 40대 교사 출신 개발자를 위한 종합 가이드.',
+    markdownFile: '2025-08-10-gpt5-comprehensive-analysis.md',
+    author: 'Jay',
+    date: '2025-08-10',
+    readTime: '45분',
+    category: 'Research',
+    tags: ['GPT-5', 'comprehensive-analysis', 'performance-study', 'AI-analysis'],
+    series: 'GPT-5 비교 연구',
+  },
+  {
+    id: 'gpt5-quality-comparison',
+    title: 'GPT-5 Quality Comparison',
+    excerpt: 'GPT-4.1과 GPT-5의 품질 비교 분석. 실제 사용 사례를 통한 상세한 성능 평가.',
+    markdownFile: '2025-08-10-gpt5-quality-comparison.md',
+    author: 'Jay',
+    date: '2025-08-10',
+    readTime: '20분',
+    category: 'Research',
+    tags: ['GPT-5', 'quality-comparison', 'performance'],
+    series: 'GPT-5 비교 연구',
+  },
+  {
+    id: 'gpt5-english-prompt',
+    title: 'GPT-5 English Prompt Analysis',
+    excerpt: 'GPT-5의 영어 프롬프트 처리 능력 분석. 한국어 질문 시 어색하게 전환되는 현상에 대한 연구.',
+    markdownFile: '2025-08-10-gpt5-english-prompt.md',
+    author: 'Jay',
+    date: '2025-08-10',
+    readTime: '30분',
+    category: 'Research',
+    tags: ['GPT-5', 'English-prompt', 'language-analysis'],
+    series: 'GPT-5 비교 연구',
+  },
+  {
+    id: 'language-structure-llm-analysis',
+    title: '언어 구조가 LLM 성능에 미치는 영향: 순수한 호기심에서 시작된 발견',
+    excerpt: '하다보니까 재밌기도 한데 궁금한거야.. 왜 일본어랑 중국어 어렵다고 해놓고 아니지? LangChain Hub 실습 중 우연히 발견한 현상에서 시작된 연구.',
+    markdownFile: '2025-08-14-language-structure-llm-analysis.md',
+    author: 'Jay',
+    date: '2025-08-14',
+    readTime: '60분',
+    category: 'Research',
+    tags: ['AI', '언어학', 'LLM', '형태소분석', '독립연구', '퍼플렉시티'],
+    series: '언어 구조 연구',
+  },
+  {
+    id: 'ai-tool-preparation',
+    title: 'AI 도구 준비',
+    excerpt: 'AI 도구 개발을 위한 준비 과정과 계획',
+    markdownFile: '2025-08-15-ai-tool-preparation.md',
+    author: 'Jay',
+    date: '2025-08-15',
     readTime: '5분',
-    category: 'Development',
-    tags: ['Next.js', 'React', 'Web Development'],
-    image: '/images/insights/nextjs.jpg',
+    category: 'Research',
+    tags: ['AI', 'tool-preparation', 'planning'],
+    series: 'AI 도구 분석',
+  },
+  // Apps
+  {
+    id: 'ai-education-assistant',
+    title: 'AI 교육 질의응답 도구',
+    excerpt: '교육 전문가 수준의 맞춤형 답변을 생성해주는 인터랙티브 웹 도구입니다. 프롬프트 엔지니어링, AI 도구 비교, 기업 도입 전략 등에 대한 답변을 제공합니다.',
+    url: '/apps/ai-education-assistant/index.html',
+    type: 'app',
+    author: 'Jay',
+    date: '2025-12-02',
+    category: 'Apps',
+    tags: ['Web App', 'Interactive', 'Education', 'AI'],
+  },
+  // Docs
+  {
+    id: 'ai-tools-comparison-pdf',
+    title: 'AI Tools Comparison Guide',
+    excerpt: 'ChatGPT, Claude, Copilot 등 주요 AI 도구들의 특징과 장단점을 비교 분석한 PDF 가이드입니다.',
+    url: '/docs/ai-tools-comparison.pdf',
+    type: 'pdf',
+    author: 'Jay',
+    date: '2025-12-02',
+    category: 'Docs',
+    tags: ['PDF', 'Comparison', 'Guide'],
   },
   {
-    id: '2',
-    title: 'AI와 함께하는 개발: LangChain 활용기',
-    excerpt: 'FlowNote MVP를 개발하면서 LangChain을 활용한 경험을 공유합니다. AI 모델 통합의 실제 사례와...',
-    content: `
-## LangChain 도입 배경
-
-AI 모델을 애플리케이션에 통합하는 것은 쉽지 않습니다.
-
-### 해결하고자 했던 문제
-
-- 복잡한 프롬프트 관리
-- 모델 간의 체이닝
-- 메모리 관리
-
-LangChain은 이러한 문제들을 우아하게 해결해줍니다.
-    `,
-    author: 'Your Name',
-    date: '2025-01-10',
-    readTime: '8분',
-    category: 'AI',
-    tags: ['AI', 'LangChain', 'Python'],
-    image: '/images/insights/ai.jpg',
+    id: 'copilot-account-guide-pdf',
+    title: 'Copilot Account Guide',
+    excerpt: 'Microsoft Copilot 계정 설정 및 관리 방법에 대한 상세 가이드입니다.',
+    url: '/docs/copilot-account-guide.pdf',
+    type: 'pdf',
+    author: 'Jay',
+    date: '2025-12-02',
+    category: 'Docs',
+    tags: ['PDF', 'Guide', 'Copilot'],
   },
   {
-    id: '3',
-    title: '경력 전환 개발자의 1년 회고',
-    excerpt: '교육계에서 개발자로 전환한 첫 해를 돌아봅니다. 힘들었던 순간들과 성장의 기록...',
-    content: `
-## 1년을 돌아보며
-
-개발자로 커리어를 전환한 지 벌써 1년이 지났습니다.
-
-### 가장 힘들었던 점
-
-- 끊임없는 학습
-- 에러와의 싸움
-
-### 가장 보람찼던 순간
-
-- 내가 만든 서비스가 동작할 때
-- 사용자의 피드백을 받았을 때
-    `,
-    author: 'Your Name',
-    date: '2025-01-05',
-    readTime: '10분',
-    category: 'Career',
-    tags: ['Career', 'Reflection', 'Growth'],
-    image: '/images/insights/career.jpg',
-  },
-  {
-    id: '4',
-    title: 'Mac M1에서 개발 환경 세팅하기',
-    excerpt: 'Apple Silicon Mac에서 개발 환경을 구축하면서 겪은 이슈들과 해결 방법을 정리했습니다...',
-    content: `
-## M1 맥북 세팅기
-
-Apple Silicon 칩셋에서의 개발 환경 세팅은 초기에 많은 어려움이 있었습니다.
-
-### 주요 이슈
-
-- Docker 호환성
-- Homebrew 경로
-- Python 라이브러리 설치
-
-이제는 대부분 해결되었지만, 여전히 주의할 점들이 있습니다.
-    `,
-    author: 'Your Name',
-    date: '2024-12-20',
-    readTime: '6분',
-    category: 'Development',
-    tags: ['Mac', 'Setup', 'Tools'],
-    image: '/images/insights/mac.jpg',
+    id: 'lecture-materials-pdf',
+    title: 'AI Lecture Materials',
+    excerpt: 'AI 교육 및 강의를 위한 종합 자료집입니다.',
+    url: '/docs/lecture-materials.pdf',
+    type: 'pdf',
+    author: 'Jay',
+    date: '2025-12-02',
+    category: 'Docs',
+    tags: ['PDF', 'Lecture', 'Education'],
   },
 ]
