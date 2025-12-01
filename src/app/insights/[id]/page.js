@@ -137,11 +137,13 @@ export default async function InsightDetailPage({ params }) {
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {markdownContent}
             </ReactMarkdown>
-          ) : (
+          ) : insight.content ? (
             <div 
               className="leading-relaxed"
               dangerouslySetInnerHTML={{ __html: insight.content.replace(/\n/g, '<br>') }}
             />
+          ) : (
+            <p className="text-gray-500 dark:text-gray-400">콘텐츠가 없습니다.</p>
           )}
         </div>
       </article>
