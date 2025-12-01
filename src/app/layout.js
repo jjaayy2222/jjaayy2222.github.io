@@ -10,7 +10,7 @@ const fragmentMono = Fragment_Mono({
 });
 
 export const metadata = {
-  title: "Biobricks Portfolio",
+  title: "Jay's homepage",
   description: "Personal Portfolio Website",
 };
 
