@@ -1,19 +1,16 @@
-# Jekyll 빌드 결과물 (레거시)
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Next.js 빌드 결과물
+# ===========================
+# Next.js
+# ===========================
+# 빌드 결과물
 .next/
 out/
 build/
 dist/
 
-# Next.js 의존성
+# 의존성
 node_modules/
 
-# Next.js 환경 변수
+# 환경 변수
 .env
 .env.local
 .env.development.local
@@ -21,49 +18,72 @@ node_modules/
 .env.production.local
 .env*.local
 
-# Next.js 캐시
+# 캐시 및 임시 파일
 .turbo/
+*.tsbuildinfo
+.swc/
 
-# 개발 중 임시 파일들
-temp/
-*.tmp
-*.bak
+# 배포 관련
+.vercel/
+
+# ===========================
+# Jekyll (레거시)
+# ===========================
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 /_posts/2025-08-10-welcome-to-jekyll.markdown
-
-# 기본 포스팅 파일 (선택적)
 _posts/welcome.md
 _posts/*-welcome-*
 
-# macOS 파일들
+# ===========================
+# 개발 임시 파일
+# ===========================
+temp/
+*.tmp
+*.bak
+backups/
+drafts/
+
+# ===========================
+# macOS
+# ===========================
 .DS_Store
 .DS_Store?
 ._*
 
-# 에디터 임시 파일들
+# ===========================
+# 에디터 및 IDE
+# ===========================
+# VS Code
+.vscode/
+
+# IntelliJ / WebStorm
+.idea/
+
+# Vim
 *.swp
 *.swo
 *~
 
-# 로그 파일들
+# ===========================
+# 로그 파일
+# ===========================
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
+# ===========================
+# 테스트 및 커버리지
+# ===========================
+coverage/
+.nyc_output/
+
+# ===========================
 # 번들러 관련
+# ===========================
 vendor/
 .bundle/
-drafts/
-
-# 임시 파일 (Framer 분석용)
-temp/
-temp/2025-08/
-temp/2025-11/
-temp/2025-11/11_24/
-temp/2025-11/11_24/files/
-temp/2025-11/11_24/files/Biobricks - Personal Portfolio Website.html
-
-# .vscode 관련
-.vscode/
-
-backups/
