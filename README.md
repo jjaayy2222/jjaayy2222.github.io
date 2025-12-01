@@ -109,7 +109,7 @@ Azure 머신러닝 기반 개인화 식단 추천 알고리즘
 
 ## 🎓 Education
 
-### **Microsoft AI School 5기**
+### **| Microsoft AI School 5기**
 생성형 AI 및 Azure 클라우드 전문가 양성 과정  
 **2024.09 ~ 2025.02** (6개월, 960시간)
 
@@ -117,14 +117,14 @@ Azure 머신러닝 기반 개인화 식단 추천 알고리즘
 - 머신러닝 & 딥러닝 (CNN, ResNet, Stable Diffusion)
 - Azure OpenAI & AI Services 활용 프로젝트
 
-### **ICT 충청권 부트캠프**
+### **| ICT 충청권 부트캠프**
 생성형 AI 활용 및 심화 개발 과정  
 **2025.05 ~ 2025.11** (6개월, 960시간)
 
 - LangChain & LangGraph, RAG 구현
 - LLM Fine-tuning, 데이터 분석
 
-### **Google Cloud Study Jam**
+### **| Google Cloud Study Jam**
 Google Cloud AI/ML 자기주도 학습  
 **2025.08 ~ 2025.10**
 
@@ -146,10 +146,9 @@ Google Cloud AI/ML 자기주도 학습
 
 <div align="center">
 
+[![GitHub](https://img.shields.io/badge/GitHub-jjaayy2222.github.io-yellow?style=for-the-badge&logo=github)](https://github.com/jjaayy2222)
 [![Portfolio](https://img.shields.io/badge/Portfolio-jjaayy2222.github.io-blue?style=for-the-badge&logo=github)](https://jjaayy2222.github.io)
 [![Email](https://img.shields.io/badge/Email-qkfkadmlekf@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:qkfkadmlekf@gmail.com)
-
-**Location**: 충청북도 청주시 | **Phone**: 010-2516-1471
 
 </div>
 
