@@ -16,10 +16,13 @@ const navItems = [
   { name: 'Projects', path: '/projects', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
   )},
-  { name: 'Products', path: '/products', icon: (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+  { name: 'Education', path: '/education', icon: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
   )},
-  { name: 'Writing', path: '/insights', icon: (
+  { name: 'Learning', path: '/learning', icon: (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+  )},
+  { name: 'Insights', path: '/insights', icon: (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
   )},
   { name: 'Stacks', path: '/stack', icon: (
@@ -28,13 +31,11 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { name: 'Facebook', label: 'FB', href: '#' },
-  { name: 'Twitter', label: 'TW', href: '#' },
-  { name: 'Dribbble', label: 'DB', href: '#' },
-  { name: 'Behance', label: 'BE', href: '#' },
-  { name: 'Notion', label: 'N', icon: (
-    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28.047-.606 0-.606-.607-.653-1.167-.606-.56.047-1.214.14-1.68.14H6.186c-1.353 0-1.82.373-1.727 1.4zm2.895 15.43c.42.327.84.607 1.26.933.233.187.513.094.513-.28V7.518c0-.42-.327-.606-.653-.606-.327 0-.607.186-.887.42-.326.233-1.493 1.166-1.493 1.586v10.165c0 .326.233.56.56.56.28 0 .466-.094.7-.327zm10.784-14.1l-6.067.374c-.233 0-.373.14-.373.373v11.285c0 .14.046.233.14.28.093.046.186.046.28 0l6.206-3.687c.187-.093.28-.233.28-.42V5.865c0-.187-.14-.327-.466-.327z"/></svg>
-  ), href: '#' },
+  { name: 'GitHub', label: 'GH', href: 'https://github.com/jjaayy2222' },
+  { name: 'Instagram', label: 'IG', href: 'https://www.instagram.com/livemylife_jay' },
+  { name: 'Discord', label: 'DC', href: 'https://discord.com/users/1299364142863486997' },
+  { name: 'LinkedIn', label: 'IN', href: '#', onClick: () => alert('곧 연결 예정입니다.') },
+  { name: 'Gmail', label: 'GM', href: 'mailto:qkgkadmlEkf@gmail.com' },
 ];
 
 export default function Sidebar() {
@@ -55,7 +56,14 @@ export default function Sidebar() {
                className="object-cover"
              />
           </div>
-          <span className="font-bold text-sm text-gray-900 dark:text-white">Jay</span>
+          <div className="flex flex-col gap-0.5">
+            <span className="font-bold text-sm text-gray-900 dark:text-white">Jay</span>
+            <div className="flex flex-col gap-0.5 text-xs text-gray-600 dark:text-gray-400 font-medium">
+              <span>AI Developer</span>
+              <span>Self-Taught LangChain Expert</span>
+              <span>INFJ Problem Solver</span>
+            </div>
+          </div>
         </div>
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -117,7 +125,7 @@ export default function Sidebar() {
           </div>
           <div className={`transition-opacity duration-300 ${isCollapsed ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
             <h2 className="font-bold text-gray-900 dark:text-white whitespace-nowrap">Jay</h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Product Designer</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">문제 해결하는 AI 개발자</p>
           </div>
         </div>
 
@@ -152,13 +160,20 @@ export default function Sidebar() {
           })}
         </nav>
 
-        {/* Socials (Online status removed) */}
         <div className="mb-auto">
           <div className="space-y-1">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => {
+                  if (link.onClick) {
+                    e.preventDefault();
+                    link.onClick();
+                  }
+                }}
+                target={link.href !== '#' && !link.onClick ? '_blank' : undefined}
+                rel={link.href !== '#' && !link.onClick ? 'noopener noreferrer' : undefined}
                 className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-900 dark:hover:text-white transition-colors ${isCollapsed ? 'justify-center' : ''}`}
                 title={isCollapsed ? link.name : ''}
               >
